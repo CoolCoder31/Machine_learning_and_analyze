@@ -18,9 +18,3 @@ for i in df.Currency.unique():
 concatenated=functools.reduce(lambda left,right: pd.merge(left,right,on='Date',how='left' if left.shape[0] > right.shape[0] else 'right'),cripto_coin)
 print(concatenated.shape)
 concatenated.head()
-# correlation_set = pd.DataFrame(sp.minmax_scale(pd.fit_transform(concatenated.iloc[:,1:].dropna())),crypto_list)
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-# plt.figure(figsize=(20,20))
-# sns.heatmap(correlation_set.corr())
-# plt.show()
