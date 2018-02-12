@@ -12,10 +12,10 @@ print(df_features.shape)
 print(df_features.nunique())
 df_features.head()
 print(df_features.Type.value_counts())
-
+plt.subplot(221)
 g = sns.factorplot(x='Type', data=df_features, kind="count",size=6,aspect=2)
 g.set_titles("Count by Type")
-plt.show()
+# plt.show()
 print(df_features.Primary.value_counts())
 
 sns.factorplot(x="Primary", data=df_features, kind="count",size=5,aspect=1)
