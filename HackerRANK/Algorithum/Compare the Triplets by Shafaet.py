@@ -1,12 +1,17 @@
 import sys
+a = b = None
 def solve(a0, a1, a2, b0, b1, b2):
-    # Complete this function
-    def fun(a,b):
-        if a > b :
-            return 1
-        else:
-            return ' '
-    return(fun(a0,b0),fun(a1,b1),fun(a2,b2))
+        A = B = 0
+        for i in range(3):
+            a = 'a' + str(i)
+            b = 'b' + str(i)
+            if a > b:
+                A = A + 1
+                return A
+            if a < b:
+                B = B + 1
+                return B
+        return str(str(A) + '' + str(B))
 a0, a1, a2 = input().strip().split(' ')
 a0, a1, a2 = [int(a0), int(a1), int(a2)]
 b0, b1, b2 = input().strip().split(' ')
